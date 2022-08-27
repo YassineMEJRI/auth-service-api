@@ -5,36 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a46fa912-78c4-4713-a628-6b9ff80baf4c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/Configuration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/api/ApiUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/api/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/api/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/api/Handler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/api/ResponseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/api/RoleHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/api/StatusCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/api/UserHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/api/UserRoleHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/domain/UserRoleDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/domain/role/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/domain/role/RoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/domain/user/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/domain/user/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/domain/user/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/errors/ApplicationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/errors/ApplicationExceptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/errors/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/errors/InvalidRequestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/errors/MethodNotAllowedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/errors/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/api/LoginHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/user/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +47,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/yecin/Fiverr/hkleun/auth-service-api/src/main/java"
+    "last_opened_file_path": "/home/yecin/Fiverr/hkleun/auth-service-api/src/main/java",
+    "nodejs_package_manager_path": "npm"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -111,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661594843660</updated>
-      <workItem from="1661594845314" duration="7079000" />
+      <workItem from="1661594845314" duration="9409000" />
     </task>
     <servers />
   </component>

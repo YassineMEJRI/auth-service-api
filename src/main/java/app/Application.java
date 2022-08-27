@@ -1,5 +1,6 @@
 package app;
 
+import app.api.LoginHandler;
 import app.api.RoleHandler;
 import app.api.UserHandler;
 import app.api.UserRoleHandler;
@@ -20,10 +21,12 @@ class Application {
         UserHandler userHandler = new UserHandler(getUserService(), getObjectMapper(), getErrorHandler());
         RoleHandler roleHandler = new RoleHandler(getRoleService(), getObjectMapper(), getErrorHandler());
         UserRoleHandler userRoleHandler = new UserRoleHandler(getUserService(), getObjectMapper(), getErrorHandler());
+        LoginHandler loginHandler = new LoginHandler(getUserService(), getObjectMapper(), getErrorHandler());
 
         server.createContext("/api/user", userHandler::handle);
         server.createContext("/api/role", roleHandler::handle);
         server.createContext("/api/user/add_role", userRoleHandler::handle);
+        server.createContext("/api/login", loginHandler::handle);
 
 
 

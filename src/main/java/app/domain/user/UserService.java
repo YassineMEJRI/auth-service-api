@@ -70,4 +70,13 @@ public class UserService {
         user.removeRole(role);
         return true;
     }
+
+    public User authenticate(String username, String password) {
+        User user = users.get(username);
+        if (user == null)
+            return null;
+        if(password.equals(user.getPassword()))
+            return user;
+        return null;
+    }
 }
