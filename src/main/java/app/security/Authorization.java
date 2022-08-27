@@ -36,8 +36,17 @@ public class Authorization {
         invalidatedTokens.add(token);
     }
 
+    public static boolean verify(String token) {
+        try {
+            DecodedJWT verify = verifier.verify(token);
+        } catch (JWTVerificationException e) {
+            return false;
+        }
+        return true;
+    }
+
     public static boolean isValid(String token) {
-        return !invalidatedTokens.contains(token);
+        return !invalidatedTokens.contains(token) && verify(token);
     }
 
     public static String authorize(User authenticatedUser) {

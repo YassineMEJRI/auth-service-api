@@ -2,8 +2,6 @@ package app.domain.user;
 
 import app.domain.role.Role;
 import app.domain.role.RoleService;
-import app.errors.ApplicationException;
-import app.errors.ApplicationExceptions;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -78,5 +76,9 @@ public class UserService {
         if(password.equals(user.getPassword()))
             return user;
         return null;
+    }
+
+    public HashMap<String, User> getUsers() {
+        return users;
     }
 }

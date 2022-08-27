@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a46fa912-78c4-4713-a628-6b9ff80baf4c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/api/AuthRolesHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/api/CheckRoleHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/api/InvalidateHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/domain/TokenRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/security/Authorization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/security/Token.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/app/domain/role/RoleServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/app/domain/user/UserServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/app/security/AuthorizationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/api/LoginHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/api/LoginHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/api/ResponseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/api/ResponseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/role/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/role/RoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/security/Authorization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/security/Authorization.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -52,6 +53,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "last_opened_file_path": "/home/yecin/Fiverr/hkleun/auth-service-api/src/main/java",
     "nodejs_package_manager_path": "npm"
   }
@@ -60,27 +64,106 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="app.security" />
+      <recent name="app.domain.role" />
+      <recent name="app.domain.user" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="app.domain.user" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="app.Application" />
+  <component name="RunManager" selected="JUnit.AuthorizationTest.testTokenExpiration">
+    <configuration name="AuthorizationTest.checkUserRole" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="auth-service-api" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="app.*" />
+          <option name="PATTERN" value="app.security.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="app.security" />
+      <option name="MAIN_CLASS_NAME" value="app.security.AuthorizationTest" />
+      <option name="METHOD_NAME" value="checkUserRole" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthorizationTest.getAuthorizedRoles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auth-service-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.security.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="app.security" />
+      <option name="MAIN_CLASS_NAME" value="app.security.AuthorizationTest" />
+      <option name="METHOD_NAME" value="getAuthorizedRoles" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthorizationTest.invalidate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auth-service-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.security.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="app.security" />
+      <option name="MAIN_CLASS_NAME" value="app.security.AuthorizationTest" />
+      <option name="METHOD_NAME" value="invalidate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthorizationTest.isValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auth-service-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.security.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="app.security" />
+      <option name="MAIN_CLASS_NAME" value="app.security.AuthorizationTest" />
+      <option name="METHOD_NAME" value="isValid" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthorizationTest.testTokenExpiration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auth-service-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.security.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="app.security" />
+      <option name="MAIN_CLASS_NAME" value="app.security.AuthorizationTest" />
+      <option name="METHOD_NAME" value="testTokenExpiration" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.AuthorizationTest.testTokenExpiration" />
+        <item itemvalue="JUnit.AuthorizationTest.isValid" />
+        <item itemvalue="JUnit.AuthorizationTest.invalidate" />
+        <item itemvalue="JUnit.AuthorizationTest.checkUserRole" />
+        <item itemvalue="JUnit.AuthorizationTest.getAuthorizedRoles" />
       </list>
     </recent_temporary>
   </component>
@@ -92,7 +175,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661594843660</updated>
-      <workItem from="1661594845314" duration="14026000" />
+      <workItem from="1661594845314" duration="20294000" />
     </task>
     <servers />
   </component>

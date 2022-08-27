@@ -31,4 +31,8 @@ public class RoleService {
     public List<Role> getAllRoles() {
         return new ArrayList<>(roles.values());
     }
+
+    public HashMap<String, Role> getRoles() {
+        return roles;
+    }
 }
