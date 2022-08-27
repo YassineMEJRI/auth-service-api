@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a46fa912-78c4-4713-a628-6b9ff80baf4c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/api/LoginHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/api/AuthRolesHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/api/CheckRoleHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/api/InvalidateHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/domain/TokenRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/security/Authorization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/security/Token.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/api/LoginHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/api/LoginHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/api/ResponseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/api/ResponseEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +92,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661594843660</updated>
-      <workItem from="1661594845314" duration="9409000" />
+      <workItem from="1661594845314" duration="14026000" />
     </task>
     <servers />
   </component>

@@ -1,9 +1,6 @@
 package app;
 
-import app.api.LoginHandler;
-import app.api.RoleHandler;
-import app.api.UserHandler;
-import app.api.UserRoleHandler;
+import app.api.*;
 import com.sun.net.httpserver.HttpServer;
 
 import java.io.IOException;
@@ -22,11 +19,17 @@ class Application {
         RoleHandler roleHandler = new RoleHandler(getRoleService(), getObjectMapper(), getErrorHandler());
         UserRoleHandler userRoleHandler = new UserRoleHandler(getUserService(), getObjectMapper(), getErrorHandler());
         LoginHandler loginHandler = new LoginHandler(getUserService(), getObjectMapper(), getErrorHandler());
+        AuthRolesHandler authRolesHandler = new AuthRolesHandler(getObjectMapper(), getErrorHandler());
+        CheckRoleHandler checkRoleHandler = new CheckRoleHandler(getObjectMapper(), getErrorHandler());
+        InvalidateHandler invalidateHandler = new InvalidateHandler(getObjectMapper(), getErrorHandler());
 
         server.createContext("/api/user", userHandler::handle);
         server.createContext("/api/role", roleHandler::handle);
         server.createContext("/api/user/add_role", userRoleHandler::handle);
         server.createContext("/api/login", loginHandler::handle);
+        server.createContext("/api/user_roles", authRolesHandler::handle);
+        server.createContext("/api/check_role", checkRoleHandler::handle);
+        server.createContext("/api/invalidate", invalidateHandler::handle);
 
 
 

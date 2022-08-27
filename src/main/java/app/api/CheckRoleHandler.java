@@ -1,37 +1,26 @@
 package app.api;
 
-import app.domain.role.Role;
-import app.domain.user.User;
-import app.domain.user.UserDto;
-import app.domain.user.UserService;
+import app.domain.TokenRole;
 import app.errors.ApplicationExceptions;
 import app.errors.GlobalExceptionHandler;
 import app.security.Authorization;
-import com.auth0.jwt.JWT;
-import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sun.net.httpserver.HttpExchange;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.Date;
-import java.util.stream.Collectors;
 
-public class LoginHandler extends Handler{
-    private final UserService userService;
-
-    public LoginHandler(UserService userService, ObjectMapper objectMapper,
-                       GlobalExceptionHandler exceptionHandler) {
+public class CheckRoleHandler extends Handler {
+    public CheckRoleHandler(ObjectMapper objectMapper, GlobalExceptionHandler exceptionHandler) {
         super(objectMapper, exceptionHandler);
-        this.userService = userService;
     }
-
     @Override
     protected void execute(HttpExchange exchange) throws IOException {
         byte[] response;
         if ("POST".equals(exchange.getRequestMethod())) {
-            ResponseEntity e = login(exchange.getRequestBody());
+            ResponseEntity<String> e = checkRole(exchange.getRequestBody());
             exchange.getResponseHeaders().putAll(e.getHeaders());
             exchange.sendResponseHeaders(e.getStatusCode().getCode(), 0);
             response = super.writeResponse(e.getBody());
@@ -46,16 +35,18 @@ public class LoginHandler extends Handler{
         os.close();
     }
 
-    private ResponseEntity login(InputStream is) {
-        UserDto userDto = super.readRequest(is, UserDto.class);
-
-        User authenticatedUser = userService.authenticate(userDto.getUsername(), userDto.getPassword());
+    private ResponseEntity<String> checkRole(InputStream is) {
         String response;
-        if (authenticatedUser != null) {
-            String token = Authorization.authorize(authenticatedUser);
-            response = token;
+        TokenRole tokenRole = super.readRequest(is, TokenRole.class);
+        boolean hasRole = false;
+        try {
+            hasRole = Authorization.checkUserRole(tokenRole.getToken(), tokenRole.getRole());
+            if (hasRole)
+                response = "Authorized";
+            else response = "Unauthorized";
+        } catch (JWTVerificationException e ) {
+            response = e.getMessage();
         }
-        else response = "Incorrect credentials!";
 
         return new ResponseEntity<>(response,
                 getHeaders(Constants.CONTENT_TYPE, Constants.APPLICATION_JSON), StatusCode.OK);
