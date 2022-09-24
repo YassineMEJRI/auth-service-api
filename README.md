@@ -1,4 +1,6 @@
 # Simple authentication and authorization API with Java (no frameworks)
+### Description
+https://fantastic-catamaran-30b.notion.site/Description-f8a9089c74e341948e4c36b9d12a1a16
 
 ## API endpoints
 
